@@ -1,36 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText_name"
-        android:layout_width="83dp"
-        android:layout_height="41dp"
-        android:text="Name"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="61dp"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editText_age"
-        android:layout_width="92dp"
-        android:layout_height="38dp"
-        android:text="Age"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="146dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="223dp"
-        tools:ignore="MissingConstraints" />
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-</android.support.constraint.ConstraintLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="20dp"
+            />
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:textSize="20dp"
+            />
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textSize="20dp"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
